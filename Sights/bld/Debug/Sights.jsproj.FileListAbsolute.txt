@@ -1,0 +1,13 @@
+c:\users\yui\documents\visual studio 2012\Projects\Sights\Sights\bin\Debug\resources.pri
+c:\users\yui\documents\visual studio 2012\Projects\Sights\Sights\bin\Debug\AppxManifest.xml
+c:\users\yui\documents\visual studio 2012\Projects\Sights\Sights\bin\Debug\Sights.build.appxrecipe
+c:\users\yui\documents\visual studio 2012\Projects\Sights\Sights\bld\Debug\priconfig.xml.intermediate
+c:\users\yui\documents\visual studio 2012\Projects\Sights\Sights\bld\Debug\layout.resfiles.intermediate
+c:\users\yui\documents\visual studio 2012\Projects\Sights\Sights\bld\Debug\resources.resfiles.intermediate
+c:\users\yui\documents\visual studio 2012\Projects\Sights\Sights\bld\Debug\pri.resfiles.intermediate
+c:\users\yui\documents\visual studio 2012\Projects\Sights\Sights\bld\Debug\priconfig.xml
+c:\users\yui\documents\visual studio 2012\Projects\Sights\Sights\bld\Debug\layout.resfiles
+c:\users\yui\documents\visual studio 2012\Projects\Sights\Sights\bld\Debug\resources.resfiles
+c:\users\yui\documents\visual studio 2012\Projects\Sights\Sights\bld\Debug\pri.resfiles
+c:\users\yui\documents\visual studio 2012\Projects\Sights\Sights\bld\Debug\LanguageQualifiers.txt
+c:\users\yui\documents\visual studio 2012\Projects\Sights\Sights\bld\Debug\ProjectArchitectures.txt
