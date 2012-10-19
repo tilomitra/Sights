@@ -3,28 +3,28 @@
 <head>
     <meta charset="utf-8" />
     <title>groupedItemsPage</title>
-    
+
     <!-- WinJS references -->
     <link href="//Microsoft.WinJS.1.0.RC/css/ui-dark.css" rel="stylesheet" />
     <script src="//Microsoft.WinJS.1.0.RC/js/base.js"></script>
     <script src="//Microsoft.WinJS.1.0.RC/js/ui.js"></script>
-    
+
     <link href="/css/default.css" rel="stylesheet" />
     <link href="/pages/groupedItems/groupedItems.css" rel="stylesheet" />
-    <script src="/js/data.js"></script>
+    <script src="/js/ydata.js"></script>
     <script src="/pages/groupedItems/groupedItems.js"></script>
 </head>
 <body>
     <!-- These templates are used to display each item in the ListView declared below. -->
     <div class="headerTemplate" data-win-control="WinJS.Binding.Template">
-        <p class="group-title win-type-x-large" data-win-bind="textContent: title; groupKey: key" 
+        <p class="group-title win-type-x-large" data-win-bind="textContent: title; groupKey: key"
             onclick="WinJS.Navigation.navigate('/pages/groupDetail/groupDetail.html', { groupKey: event.srcElement.groupKey })" role="link"></p>
     </div>
     <div class="itemtemplate" data-win-control="WinJS.Binding.Template">
-        <img class="item-image" src="#" data-win-bind="src: backgroundImage; alt: title" />
+        <img class="item-image" src="#" data-win-bind="src: image; alt: title" />
         <div class="item-overlay">
             <h4 class="item-title" data-win-bind="textContent: title"></h4>
-            <h6 class="item-subtitle win-type-ellipsis" data-win-bind="textContent: subtitle"></h6>
+           <!--  <h6 class="item-subtitle win-type-ellipsis" data-win-bind="textContent: subtitle"></h6> -->
         </div>
     </div>
 
