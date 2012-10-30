@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -11,7 +11,8 @@
 
     <link href="/css/default.css" rel="stylesheet" />
     <link href="/pages/itemDetail/itemDetail.css" rel="stylesheet" />
-    <script src="/js/data.js"></script>
+    
+    <script src="/js/ydata.js"></script>
     <script src="/pages/itemDetail/itemDetail.js"></script>
 </head>
 <body>
@@ -24,7 +25,7 @@
             </h1>
         </header>
         <div class="content" aria-label="Main content" role="main">
-            <article>
+            <div class="main-area floater">
                 <div>
                     <header>
                         <h2 class="item-title"></h2>
@@ -33,8 +34,58 @@
                     <img class="item-image" src="#" />
                     <div class="item-content"></div>
                 </div>
-            </article>
+                
+                <div class="shot-info" aria-label="Shots Info">
+                    <div class="box">
+                        <p class="number">253</p>
+                        <p class="subtitle">likes</p>
+                    </div>
+                    <div class="box box-middle">
+                        <p class="number">1542</p>
+                        <p class="subtitle">views</p>
+                    </div>
+                    <div class="box">
+                        <p class="number">12</p>
+                        <p class="subtitle">Comments</p>
+                    </div>
+                </div>
+            </div>
+
+            <header>
+                <h2 class="item-subtitle">Comments</h2>
+            </header>
+            <div class="comments floater" aria-label="Comments">
+                <div class="comment-list"></div>
+            </div>
+
+
+            <div class="recent-shots floater" aria-label="Recent Shots">
+                <header>
+                    <h2 class="item-subtitle">Recent Shots</h2>
+                </header>
+                <div class="shots-list"></div>
+            </div>
         </div>
     </div>
+
+
+    <script type="text/x-script" id="comments-template">
+            <div class="comment {classname}">
+                <img src="{avatar_url}">
+                <div class="comments-content">
+                    <h4><span class="author">{name}</span> says:</h4>
+                    <p>{body}</p>
+                    <div class="comments-meta">
+                        <small class="place">From {location}</small>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+    </script>
+    <script type="text/x-script" id="shots-template">
+            <div class="recent-shot">
+                <img src="{teaser_url}">
+            </div>
+    </script>
 </body>
 </html>

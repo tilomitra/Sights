@@ -1,5 +1,4 @@
-﻿(function () {
-    "use strict";
+﻿(function() {
 
     var appView = Windows.UI.ViewManagement.ApplicationView;
     var appViewState = Windows.UI.ViewManagement.ApplicationViewState;
@@ -7,7 +6,7 @@
     var ui = WinJS.UI;
     var utils = WinJS.Utilities;
 
-    ui.Pages.define("/pages/groupedItems/groupedItems.html", {
+    var page = ui.Pages.define("/pages/groupedItems/groupedItems.html", {
 
         // This function updates the ListView with new layouts
         initializeLayout: function (listView, viewState) {
@@ -39,9 +38,9 @@
         // This function is called whenever a user navigates to this page. It
         // populates the page elements with the app's data.
         ready: function (element, options) {
-            var listView = element.querySelector(".groupeditemslist").winControl;
-            listView.groupHeaderTemplate = element.querySelector(".headerTemplate");
-            listView.itemTemplate = element.querySelector(".itemtemplate");
+            var listView = document.querySelector(".groupeditemslist").winControl;
+            listView.groupHeaderTemplate = document.querySelector(".headerTemplate");
+            listView.itemTemplate = document.querySelector(".itemtemplate");
             listView.oniteminvoked = this.itemInvoked.bind(this);
 
             this.initializeLayout(listView, appView.value);

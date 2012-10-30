@@ -1,41 +1,156 @@
-﻿.itemdetailpage .content {
+﻿.itemdetailpage {
+    overflow-x:auto;
+}
+.itemdetailpage .content {
     -ms-grid-row: 2;
+/*    column-gap: 20px;
+    column-width: 410px;*/
     display: block;
     height: 100%;
     overflow-x: auto;
     position: relative;
-    width: 100%;
+    width: 190%;
     z-index: 0;
 }
+.main-area {
+    /*columns:1;*/
+    height: 95%;
+    margin-left: 120px;
+    margin-top: 5px;
+    width: 400px;
+    height:100%;
+}
+.floater {
+    float:left;
+    margin-right:50px;
+}
+.item-subtitle {
+    margin-bottom: 20px;
+}
+
+.itemdetailpage .shot-info {
+    width:400px;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+    .itemdetailpage .shot-info .box {
+        width:32%;
+        display:inline-block;
+        text-align:center;
+        padding: 15px 0;
+    }
+
+    .itemdetailpage .shot-info .box-middle {
+        border-right: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+    }
+
+        .itemdetailpage .shot-info .box .number {
+            font-size: 150%;
+            font-weight:bold;
+        }
+
+        .itemdetailpage .shot-info .box .subtitle {
+            font-size: 80%;
+            color:#666;
+            text-transform: uppercase;
+        }
+
+.comments {
+    height:auto;
+    width:650px;
+    height:500px;
+    overflow-y:auto;
+    /*columns: 2;*/
+}
+
+
+
+.shots-list {
+    width:610px;
+    /*columns:1;*/
+}
+    .itemdetailpage .comment {
+        padding: 10px 0;
+        margin-bottom: 10px;
+        width:300px;
+        background: #eee;
+        float:left;
+    }
+
+    .comment.first {
+        margin-right:10px;
+    }
+
+    .comment.second:after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+    
+    .itemdetailpage .comment img {
+        width:50px;
+        height:auto;
+        float:left;
+        margin-left:15px;
+        margin-right:15px;
+    }
+
+    .itemdetailpage .comment .author {
+        font-weight:bold;
+    }
+    
+    .itemdetailpage .comment .comments-content {
+        padding:10px 10px 10px 30px;
+    }
+
+    .itemdetailpage .comment .comments-meta {
+        font-size: 80%;
+        color: #666;
+        float:right;
+        margin-right:20px;
+    }
+
+.itemdetailpage .shots-list .recent-shot {
+    width: 200px;
+    height: auto;
+    display:inline-block;
+}
+
+    .itemdetailpage .shots-list .recent-shot img {
+        width: 200px;
+        height: auto;
+    }
+
 
     .itemdetailpage .content article {
         /* Define a multi-column, horizontally scrolling article by default. */
-        column-fill: auto;
-        column-gap: 80px;
-        column-width: 480px;
-        height: calc(100% - 50px);
+        height: 95%;
         margin-left: 120px;
         margin-top: 5px;
-        width: 480px;
+        width: 400px;
     }
 
-        .itemdetailpage .content article header .item-title {
+        .itemdetailpage .content header .item-title {
             margin-bottom: 20px;
             margin-top: 0;
         }
 
-        .itemdetailpage .content article header .item-subtitle {
+        .itemdetailpage .content header .item-subtitle {
             margin-bottom: 20px;
             margin-top: 0;
         }
 
-        .itemdetailpage .content article .item-image {
-            height: 240px;
+        .itemdetailpage .content .item-image {
+            height: 300px;
             margin-bottom: 3px;
-            width: 460px;
+            width: 400px;
         }
 
-        .itemdetailpage .content article .item-content p {
+        .itemdetailpage .content .item-content p {
             margin-bottom: 20px;
             margin-right: 20px;
             vertical-align: baseline;
@@ -59,8 +174,8 @@
         }
 
             .itemdetailpage .content article .item-image {
-                height: 140px;
-                width: 280px;
+                height: 600px;
+                width: 800px;
             }
 
             .itemdetailpage .content article .item-content {
@@ -72,4 +187,8 @@
     .itemdetailpage .content article {
         margin-left: 100px;
     }
+}
+
+.clearfix {
+    clear: both;
 }
