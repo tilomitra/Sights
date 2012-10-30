@@ -10,6 +10,32 @@
     <script src="//Microsoft.WinJS.1.0.RC/js/ui.js"></script>
 
     <!-- Sights references -->
+    <script>
+
+        
+        YUI_config = {
+            modules: {
+                'shot-list': {
+                    fullpath: '/js/ShotList.js',
+                    requires: ['model-list', 'model-sync-yql', 'shot']
+                },
+                'shot': {
+                    fullpath: '/js/Shot.js',
+                    requires: ['model']
+                },
+                'model-sync-yql': {
+                    fullpath: '/js/model-sync-yql.js'
+                },
+                'masonry': {
+                    fullpath: "/js/YMasonry.js",
+                    requires: ["base","node","event","transition"]
+                }
+            }
+        };
+
+
+    </script>
+    <script src="/js/lib/yui3/build/yui/yui-min.js"></script>
     <link href="/css/default.css" rel="stylesheet" />
     <script src="/js/data.js"></script>
     <script src="/js/navigator.js"></script>
