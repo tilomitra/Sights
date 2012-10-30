@@ -1,12 +1,5 @@
 
-YUI({
-    modules: {
-        'model-sync-yql': {
-            fullpath: '/js/model-sync-yql.js',
-            requires: ['yql']
-        }
-    }
-}).add('shot-list', function (Y, name) {
+YUI().add('shot-list', function (Y, name) {
 
     var ShotList = Y.Base.create('shot-list', Y.ModelList, [Y.ModelSync.YQL], {
         query: "SELECT * FROM yql.query.multi WHERE queries=\"select * from json where url='http://api.dribbble.com/shots/popular'; select * from json where url='http://api.dribbble.com/shots/everyone';  select * from json where url='http://api.dribbble.com/shots/debuts'\"",
