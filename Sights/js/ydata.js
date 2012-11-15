@@ -13,63 +13,14 @@ YUI().use('shot-list', 'shot', 'yql', 'event-custom', function (Y) {
     mediumGray = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXY5g8dcZ/AAY/AsAlWFQ+AAAAAElFTkSuQmCC",
     darkGray = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXY3B0cPoPAANMAcOba1BlAAAAAElFTkSuQmCC",
 
-    shotList = new Y.Sights.ShotList({list: new WinJS.Binding.List()}); 
+    shotList = new Y.Sights.ShotList(); 
 
     shotList.load(function(e) {
-        var Page = WinJS.UI.Pages.get('/pages/groupedItems/groupedItems.html');
+        SIGHTS.modelList = shotList;
+        var Page = WinJS.UI.Pages.get('/pages/groupedMaster/groupedMaster.html');
         var page = new Page();
         page.ready();
     });
 
-    // Get a reference for an item, using the group key and item title as a
-    // unique reference to the item that can be easily serialized.
-    function getItemReference(item) {
-        return [item.group.key, item.title];
-    }
-
-    function resolveGroupReference(key) {
-        for (var i = 0; i < groupedItems.groups.length; i++) {
-            if (groupedItems.groups.getAt(i).key === key) {
-                return groupedItems.groups.getAt(i);
-            }
-        }
-    }
-
-    function resolveItemReference(reference) {
-        for (var i = 0; i < groupedItems.length; i++) {
-            var item = groupedItems.getAt(i);
-            if (item.group.key === reference[0] && item.title === reference[1]) {
-                return item;
-            }
-        }
-    }
-
-    // This function returns a WinJS.Binding.List containing only the items
-    // that belong to the provided group.
-    function getItemsFromGroup(group) {
-        return list.createFiltered(function (item) { 
-            if(item.group.key === group.key) {
-                return item;
-            } 
-        });
-    }
-
-    var groupedItems = shotList.get('list').createGrouped(
-        function groupKeySelector(item) { return item.group.key; },
-        function groupDataSelector(item) { return item.group; }
-    );
-
-    WinJS.Namespace.define("Sights", {
-        shots: shotList
-    });
-
-    WinJS.Namespace.define("Data", {
-        items: groupedItems,
-        groups: groupedItems.groups,
-        getItemsFromGroup: getItemsFromGroup,
-        getItemReference: getItemReference,
-        resolveGroupReference: resolveGroupReference,
-        resolveItemReference: resolveItemReference
-    });
 
 });
