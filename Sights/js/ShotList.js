@@ -14,10 +14,10 @@ YUI().add('shot-list', function (Y, name) {
                 everyone = r.results[1].json.shots,
                 debuts = r.results[2].json.shots,
                 arr = [];
-            
-            arr.push(this.classify(popular, 'popular'));
-            arr.push(this.classify(everyone, 'everyone'));
-            arr.push(this.classify(debuts, 'debuts'));
+                
+
+            //arr = arr.concat(popular).concat(everyone).concat(debuts);
+            arr = arr.concat(this.classify(popular, 'popular')).concat(this.classify(everyone, 'everyone')).concat(this.classify(debuts, 'debuts'));
 
             return arr;
         },
@@ -25,8 +25,12 @@ YUI().add('shot-list', function (Y, name) {
         classify: function (shotsArr, type) {
             var groupId,
                 arr = [],
-                self = this;
+                self = this,
+
             addToShots = function (arr, groupId) {
+
+                var a = [];
+
                 Y.Array.each(shotsArr, function (item, index, array) {
 
                     var o = {
@@ -40,25 +44,27 @@ YUI().add('shot-list', function (Y, name) {
                         likes_count: item.likes_count,
                         player: item.player
                     };
-                    self.add(new Y.Sights.Shot(o));
-                    self.get('list').push(o);
+                    a.push(new Y.Sights.Shot(o));
+                    //self.get('list').push(o);
                 });
+
+                return a;
             }
 
             switch (type) {
                 case "everyone":
                 groupId = 0;
-                addToShots(shotsArr, groupId);
+                arr = addToShots(shotsArr, groupId);
                 break;
 
                 case "popular":
                 groupId = 1;
-                addToShots(shotsArr, groupId);
+                arr = addToShots(shotsArr, groupId);
                 break;
 
                 case "debuts":
                 groupId = 2;
-                addToShots(shotsArr, groupId);
+                arr = addToShots(shotsArr, groupId);
                 break;
             }
 
