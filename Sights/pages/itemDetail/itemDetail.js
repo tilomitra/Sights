@@ -62,7 +62,8 @@
             // This function is called whenever a user navigates to this page. It
             // populates the page elements with the app's data.
             ready: function (element, options) {
-                var item = options && options.item ? Data.resolveItemReference(options.item) : Data.items.getAt(0);
+                var item = options.item;
+                //var item = options && options.item ? Data.resolveItemReference(options.item) : Data.items.getAt(0);
                 var shot = new Y.Sights.Shot(item);
                 Y.one('.titlearea .pagetitle').setHTML(item.group.title);
                 Y.one(".item-title").setHTML(item.title);

@@ -9,7 +9,7 @@
     height: 100%;
     overflow-x: auto;
     position: relative;
-    width: 190%;
+    width: 127%;
     z-index: 0;
 }
 .main-area {
@@ -42,8 +42,8 @@
     }
 
     .itemdetailpage .shot-info .box-middle {
-        border-right: 1px solid #ccc;
-        border-left: 1px solid #ccc;
+        border-right: 1px solid #666;
+        border-left: 1px solid #666;
     }
 
         .itemdetailpage .shot-info .box .number {
@@ -75,7 +75,7 @@
         padding: 10px 0;
         margin-bottom: 10px;
         width:300px;
-        background: #eee;
+        background: #525252;
         float:left;
     }
 
@@ -155,6 +155,10 @@
             margin-right: 20px;
             vertical-align: baseline;
         }
+
+.recent-shots {
+    margin-top: -50px;
+}
 
 @media screen and (-ms-view-state: snapped) {
     .itemdetailpage .content {
