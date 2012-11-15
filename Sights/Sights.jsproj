@@ -57,6 +57,7 @@
     <Content Include="images\storelogo.png" />
     <Content Include="js\data.js" />
     <Content Include="js\default.js" />
+    <Content Include="js\GridView.js" />
     <Content Include="js\lib\yui3\build\align-plugin\align-plugin-coverage.js" />
     <Content Include="js\lib\yui3\build\align-plugin\align-plugin-debug.js" />
     <Content Include="js\lib\yui3\build\align-plugin\align-plugin-min.js" />
@@ -1723,6 +1724,9 @@
     <Content Include="js\ShotList.js" />
     <Content Include="js\ydata.js" />
     <Content Include="js\YMasonry.js" />
+    <Content Include="pages\groupedMaster\groupedMaster.css" />
+    <Content Include="pages\groupedMaster\groupedMaster.html" />
+    <Content Include="pages\groupedMaster\groupedMaster.js" />
     <Content Include="pages\itemDetail\itemDetail.css" />
     <Content Include="pages\itemDetail\itemDetail.html" />
     <Content Include="pages\itemDetail\itemDetail.js" />
