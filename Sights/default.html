@@ -23,6 +23,11 @@
                     fullpath: '/js/Shot.js',
                     requires: ['model']
                 },
+
+                'grid-view': {
+                    fullpath: '/js/GridView.js',
+                    requires: ['view']
+                },
                 'model-sync-yql': {
                     fullpath: '/js/model-sync-yql.js'
                 },
@@ -33,16 +38,18 @@
             }
         };
 
+        var SIGHTS = {};
+
 
     </script>
-    <script src="/js/lib/yui3/build/yui/yui-min.js"></script>
+    <script src="/js/lib/yui3/build/yui/yui.js"></script>
     <link href="/css/default.css" rel="stylesheet" />
     <script src="/js/data.js"></script>
     <script src="/js/navigator.js"></script>
     <script src="/js/default.js"></script>
 </head>
 <body>
-    <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/groupedItems/groupedItems.html'}"></div>
+    <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/groupedMaster/groupedMaster.html'}"></div>
     <!-- <div id="appbar" data-win-control="WinJS.UI.AppBar">
         <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmd', label:'Command', icon:'placeholder'}"></button>
     </div> -->
